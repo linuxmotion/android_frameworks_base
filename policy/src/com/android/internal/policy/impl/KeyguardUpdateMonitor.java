@@ -426,7 +426,7 @@ public class KeyguardUpdateMonitor {
     /**
      * Callback for general information relevant to lock screen.
      */
-    interface InfoCallback {
+    public interface InfoCallback {
         void onRefreshBatteryInfo(boolean showBatteryInfo, boolean pluggedIn, int batteryLevel);
         void onTimeChanged();
         void onMusicChanged();
@@ -457,7 +457,7 @@ public class KeyguardUpdateMonitor {
     /**
      * Callback to notify of sim state change.
      */
-    interface SimStateCallback {
+    public interface SimStateCallback {
         void onSimStateChanged(IccCard.State simState);
     }
 
