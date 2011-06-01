@@ -16,9 +16,12 @@
 
 package com.android.internal.policy.impl;
 
+import com.android.internal.lockscreen.LockScreenView;
+
 import com.android.internal.R;
 import com.android.internal.telephony.IccCard;
 import com.android.internal.widget.LockPatternUtils;
+
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -598,14 +601,12 @@ public class LockPatternKeyguardView extends KeyguardViewBase {
 	* If security is enabled then this lockscreen should never
 	* be shown even with the intent.
 	*
-	*
+	* This is a special lockscreen class that handles the packge
+	* that controls the lockscreeen.
 	*
 	*/
-	
-
-
-
-        return new LockScreen(
+        
+        return new LockScreenView(
                 mContext,
                 mConfiguration,
                 mLockPatternUtils,

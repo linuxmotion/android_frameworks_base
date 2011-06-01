@@ -1918,10 +1918,35 @@ public class Intent implements Parcelable, Cloneable {
      */
     public static final String ACTION_APP_LAUNCH_FAILURE_RESET = "com.tmobile.intent.action.APP_LAUNCH_FAILURE_RESET";
 
+    
+    
+    /**
+     * Broadcast Action: Test the new lockscreen to assure that it works. 
+     * This can only be accessed by the system.
+     * @hide
+     */
+     public final String ACTION_APP_LOCKSCREEN_TEST = "com.android.intent.action.ACTION_APP_LOCKSCREEN_TEST";
+    /**
+     * Broadcast Action: Sets new lockscreen app as the current lockscreen
+     * This can only be accessed by the system
+     * @hide
+     */
+     public final String ACTION_APP_LOCKSCREEN_SET = "com.android.intent.action.ACTION_APP_LOCKSCREEN_SET";
+    
+    
+    
     // ---------------------------------------------------------------------
     // ---------------------------------------------------------------------
     // Standard intent categories (see addCategory()).
 
+     /**
+      * Set if the activity should be the allowed to be set as the default lockscreen.
+      * This does not actually set the lockscreen.
+      * 
+      */
+     @SdkConstant(SdkConstantType.INTENT_CATEGORY)
+     public static final String CATEGORY_LOCKSCREEN = "android.intent.category.LOCKSCREEN";
+     
     /**
      * Set if the activity should be an option for the default action
      * (center press) to perform on a piece of data.  Setting this will
