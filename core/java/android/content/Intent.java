@@ -1925,13 +1925,13 @@ public class Intent implements Parcelable, Cloneable {
      * This can only be accessed by the system.
      * @hide
      */
-     public final String ACTION_APP_LOCKSCREEN_TEST = "com.android.intent.action.ACTION_APP_LOCKSCREEN_TEST";
+     public static final String ACTION_APP_LOCKSCREEN_TEST = "com.android.intent.action.ACTION_APP_LOCKSCREEN_TEST";
     /**
      * Broadcast Action: Sets new lockscreen app as the current lockscreen
      * This can only be accessed by the system
      * @hide
      */
-     public final String ACTION_APP_LOCKSCREEN_SET = "com.android.intent.action.ACTION_APP_LOCKSCREEN_SET";
+     public static final String ACTION_APP_LOCKSCREEN_SET = "com.android.intent.action.ACTION_APP_LOCKSCREEN_SET";
     
     
     

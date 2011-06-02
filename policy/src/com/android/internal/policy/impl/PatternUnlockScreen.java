@@ -30,6 +30,7 @@ import android.text.format.DateFormat;
 import android.text.TextUtils;
 import android.util.Log;
 import com.android.internal.R;
+import com.android.security.lockscreen.LockScreenView;
 import com.android.internal.telephony.IccCard;
 import com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient;
 import com.android.internal.widget.LockPatternUtils;
@@ -259,7 +260,7 @@ class PatternUnlockScreen extends LinearLayoutWithDefaultTouchRecepient
 
         // until we get an update...
         mCarrier.setText(
-                LockScreen.getCarrierString(
+                LockScreenView.getCarrierString(
                         mUpdateMonitor.getTelephonyPlmn(),
                         mUpdateMonitor.getTelephonySpn()));
     }
@@ -399,7 +400,7 @@ class PatternUnlockScreen extends LinearLayoutWithDefaultTouchRecepient
 
     /** {@inheritDoc} */
     public void onRefreshCarrierInfo(CharSequence plmn, CharSequence spn) {
-        mCarrier.setText(LockScreen.getCarrierString(plmn, spn));
+        mCarrier.setText(LockScreenView.getCarrierString(plmn, spn));
     }
 
     /** {@inheritDoc} */

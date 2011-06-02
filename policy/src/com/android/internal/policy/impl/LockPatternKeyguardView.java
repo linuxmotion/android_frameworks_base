@@ -16,7 +16,7 @@
 
 package com.android.internal.policy.impl;
 
-import com.android.internal.lockscreen.LockScreenView;
+import com.android.security.lockscreen.LockScreenView;
 
 import com.android.internal.R;
 import com.android.internal.telephony.IccCard;
@@ -743,6 +743,11 @@ public class LockPatternKeyguardView extends KeyguardViewBase {
                     WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         }
         dialog.show();
+    }
+    
+    public static boolean isInDebugMode(){
+    	return DEBUG_CONFIGURATION;
+    	
     }
 
     private void showAlmostAtAccountLoginDialog() {
